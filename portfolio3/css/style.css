@@ -1,0 +1,245 @@
+:root {
+    --blanco: #ffffff;        
+}
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: Nunito, sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    background: black;
+    overflow-x: hidden;
+}
+section[id]{
+    scroll-margin-top: 40px;
+}
+.boton {
+    display: block;
+    color: red;
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 2px solid red;
+    background: transparent;
+    width: 30rem;
+    border-radius: 4rem;
+    margin-top: 3rem;
+    transition: .5s all;
+}
+.boton--secundario {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    background: red;
+    width: 20rem;
+    padding: 1rem;
+    border-radius: 4rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+.boton:hover {
+    transform: scale(1.2);
+}
+/* Header */
+.header {
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 300px;
+    background: rgb(25, 25, 34);
+    text-align: center;
+    color: white;
+    border-right: 2px solid rgb(50, 50, 61);
+}
+.header img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 10px solid #000000;
+}
+.sidebar__nombre {
+    color: var(--blanco);
+    font-size: 3rem;
+}
+.sidebar__nav {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.sidebar__nav li {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.sidebar__nav p {
+    margin-top: 8px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+.sidebar__nav--item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    color: white;
+    transition: .3s;
+}
+.sidebar__nav li:hover {
+    color: lightblue;
+}
+.redes {
+    text-align: center;
+    margin-top: 70%;
+}
+
+/* Main */
+main {
+    display: grid;
+    grid-template-areas: 
+    "encabezado"
+    "sobre-mi"
+    "proyectos"
+    "rodapie";
+    grid-template-columns: auto;
+    grid-template-rows: 100vh 85vh 100vh 150vh;
+    margin-left: 301px;
+}
+.contenido {
+    background: white;
+    grid-area: contenido;
+}
+.rodapie { 
+    background: gray;
+    grid-area: rodapie;
+}
+
+/* Encabezado */
+.encabezado {
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: encabezado;
+    text-align: center;
+}
+.encabezado h1 {
+    font-size: 7rem;
+    margin-top: 20%;
+    color: white;
+    text-transform: uppercase;
+}
+.encabezado p {
+    font-size: 4rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Contenido */
+/* Skills */
+.sobre-mi {
+    grid-area: sobre-mi;
+    background: rgb(37, 37, 37);
+}
+.allSkills {
+    padding: 50px 10px;
+}
+.allSkills h1 {
+    font-size: 30px;
+    color: white;
+}
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-left: 1rem;
+    list-style: none;
+    width: 40%;
+}
+.skill img{
+    width: 50%;
+}
+.skill {
+    text-align: center;
+    font-size: 20px;
+    background: white;
+    border-radius: 30px;
+    transition: .5s all;
+    width: 140px;
+}
+.skill:hover {
+    transform: scale(1.1);
+}
+
+/* Sobre Mi */
+.sobre-mi__titulo h1{
+    text-align: center;
+    font-size: 6rem;
+    color: white;
+    text-align: left;
+    margin-left: 1rem;
+}
+.sobre-mi__descripcion p {
+    width: 60%;
+    margin: 1rem 1rem ;
+    font-size: 2.2rem;
+    text-align: left;
+    color: white;
+}
+.sobre-mi__titulo {
+    border-bottom: 4px solid red;
+    width: 50%;
+}
+.prueba {
+    line-height: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Proyectos */
+
+.proyectos {
+    grid-area: proyectos;
+    background-color: red;
+}
+.proyectos--titulo {
+    font-size: 50px;
+    text-align: center;
+}
+.proyectos__contenido {
+    display: grid;
+    gap: 60px;
+    grid-template-columns: repeat(2, 1fr);
+    height: 500px;
+    margin: 40px auto;
+    width: 60%;
+}
+.proyectos__contenido-div {
+    border: 1px solid black;
+    cursor: pointer;
+    text-align: center;
+    background: url(../img/fondo.jpg);
+}
+.proyectos__contenido-div h1 {
+    margin-top: 40%;
+}
